@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"><title>Calc Pro</title></head><body>
+<div id="auth"><div class="auth"><h1>CALC PRO</h1><p>Scientific Calculator</p><div class="tabs"><button id="lt">LOGIN</button><button id="rt">REGISTER</button></div><form id="af"><input id="name" placeholder="Name"><input id="email" type="email" placeholder="Email" required><input id="pw" type="password" placeholder="Password" required><button>CONTINUE</button></form><small id="msg"></small></div></div>
+<div id="app" class="hidden"><header><b>CALC PRO</b><span id="usr"></span><div><button id="theme">☾</button><button id="logout">Logout</button></div></header><main><section class="calc">
+<div class="screen"><div id="status">COMP　DEG</div><div id="old"></div><div id="inp">0</div><div id="ansline"></div></div>
+<div class="quick"><button id="shift">SHIFT</button><button id="alpha">ALPHA</button><button id="mode">MODE</button><button id="setup">SETUP</button><button onclick="key('Ans')">Ans</button></div>
+<div class="keys">
+<button data-v="sin(" data-s="asin(">sin</button><button data-v="cos(" data-s="acos(">cos</button><button data-v="tan(" data-s="atan(">tan</button><button data-v="log(" data-s="10^">log</button><button data-v="ln(" data-s="e^">ln</button><button data-v="π" data-s="e">π</button>
+<button data-v="x²" data-s="√(">x²</button><button data-v="x³" data-s="∛(">x³</button><button data-v="^">xʸ</button><button data-v="(">(</button><button data-v=")">)</button><button data-v="!" data-s="%">!</button>
+<button data-v="7">7</button><button data-v="8">8</button><button data-v="9">9</button><button data-v="DEL">DEL</button><button data-v="AC">AC</button><button data-v="÷">÷</button>
+<button data-v="4">4</button><button data-v="5">5</button><button data-v="6">6</button><button data-v="×">×</button><button data-v="-">−</button><button data-v="+">+</button>
+<button data-v="1">1</button><button data-v="2">2</button><button data-v="3">3</button><button data-v="0">0</button><button data-v=".">.</button><button data-v="=" class="eq">EXE</button>
+<button data-v="(-)">±</button><button data-v="S↔D">S↔D</button><button data-v="nCr">nCr</button><button data-v="nPr">nPr</button><button data-v="M+">M+</button><button data-v="M-">M−</button></div>
+<div class="nav"><button>◀</button><button>▲</button><button>▼</button><button>▶</button><button onclick="key('=')">EXE</button></div></section>
+<aside><button onclick="matrix()">▦ MATRIX</button><button onclick="equation()">ƒ(x) EQUATION</button><button onclick="stats()">Σ STATISTICS</button><button onclick="complex()">ℂ COMPLEX</button><button onclick="table()">TABLE</button><button onclick="base()">BASE-N</button><h3>History</h3><div id="history"></div></aside></main></div>
+<div id="modal" class="hidden"><div class="modal"><button onclick="closeModal()">×</button><h2 id="mt"></h2><div id="mb"></div></div></div><script src="app.js"></script></body></html>
